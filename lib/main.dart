@@ -244,14 +244,13 @@ class RouteHandler {
   // backing field for the current route leg index
   int _currentIndex = 0;
 
-  // if the backing field is negative, return 0 as negative legs do no exist
   int get currentIndex {
-    return _currentIndex < 0 ? 0 : _currentIndex;
+    return _currentIndex;
   }
 
-  // ensure that the new index does not go out of bounds
+  // clamp the index to be in the correct range
   set currentIndex(int index) {
-    _currentIndex = min(index, _route.legs!.length - 1);
+    _currentIndex = index.clamp(0, _route.legs!.length - 1);
   }
 
   // updates the state of the routehandler if the route is updated externally, eg. by tapping the next marker on the route
