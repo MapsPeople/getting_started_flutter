@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="google_maps_key">YOUR_KEY_HERE</string>
+    <string name="mapbox_api_key" translatable="false">YOUR_KEY_HERE</string>
+    <string name="mapbox_access_token" translatable="false">YOUR_KEY_HERE</string>
 </resources>

@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   mapsindoors_googlemaps: ^2.0.0
+  #mapsindoors_mapbox: ^2.0.0
   flutter:
     sdk: flutter
 

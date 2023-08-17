@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:mapsindoors_googlemaps/mapsindoors.dart';
+//import 'package:mapsindoors_mapbox/mapsindoors.dart';
 
 void main() {
   runApp(const MapsIndoorsDemoApp());
@@ -184,9 +185,8 @@ class _MapState extends State<Map> {
     // show location details
     _controller = _scaffoldKey.currentState?.showBottomSheet((context) {
       return Container(
-        height: MediaQuery.of(context).size.height * 0.25,
-        width: MediaQuery.of(context).size.width,
         color: Colors.white,
+        padding: const EdgeInsets.only(bottom: 50.0, left: 100, right: 100),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -263,8 +263,7 @@ class RouteHandler {
   void showRoute(ScaffoldState scaffold) {
     _controller = scaffold.showBottomSheet((context) {
       return Container(
-        height: MediaQuery.of(context).size.height * 0.35,
-        width: MediaQuery.of(context).size.width,
+        padding: const EdgeInsets.only(top: 50.0, bottom: 50.0),
         color: Colors.white,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
