@@ -1,8 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:mapsindoors_googlemaps/mapsindoors.dart';
-//import 'package:mapsindoors_mapbox/mapsindoors.dart';
+// import 'package:mapsindoors_googlemaps/mapsindoors.dart';
+import 'package:mapsindoors_mapbox/mapsindoors.dart';
 
 void main() {
   runApp(const MapsIndoorsDemoApp());
@@ -20,7 +18,7 @@ class MapsIndoorsDemoApp extends StatelessWidget {
       ),
       // 'gettingstarted' is an alias for the demo api key
       home: const Map(
-        apiKey: 'gettingstarted',
+        apiKey: 'mapspeople3d',
       ),
     );
   }
@@ -45,7 +43,7 @@ class _MapState extends State<Map> {
   // List used to populate the search results drawer
   List<MPLocation> _searchResults = [];
   // coordinate used as origin point for directions
-  final _userPosition = MPPoint.withCoordinates(longitude: -77.03740973527613, latitude: 38.897389429704695, floorIndex: 0);
+  final _userPosition = MPPoint.withCoordinates(longitude: -97.74182, latitude: 30.3607287, floorIndex: 30);
   RouteHandler? _routeHandler;
 
   @override
@@ -62,9 +60,12 @@ class _MapState extends State<Map> {
   void onMapControlReady(MPError? error) async {
     if (error == null) {
       // Add a listener for location selection events, we do not want to stop the SDK from moving the camera, so we do not comsume the event
+      var locationsQuery = (MPQuery.builder()..setQuery("Goonies")).build();
+      var locations = await getLocationsByQuery(query: locationsQuery, filter: MPFilter.builder().build());
+      var startLocation = locations?.first;
       _mapControl
         ..setOnLocationSelectedListener(onLocationSelected, false)
-        ..goTo(await getDefaultVenue());
+        ..goTo(startLocation);
     } else {
       // if loading mapcontrol failed inform the user
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
