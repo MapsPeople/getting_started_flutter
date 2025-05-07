@@ -1,0 +1,61 @@
+PODS:
+  - Flutter (1.0.0)
+  - MapboxCommon (24.9.0):
+    - Turf (= 4.0.0)
+  - MapboxCoreMaps (11.9.2):
+    - MapboxCommon (~> 24.9)
+  - MapboxMaps (11.9.1):
+    - MapboxCommon (= 24.9.0)
+    - MapboxCoreMaps (= 11.9.2)
+    - Turf (= 4.0.0)
+  - MapsIndoors (4.9.6)
+  - mapsindoors_mapbox_ios (4.1.6):
+    - Flutter
+    - MapsIndoorsCodable (= 4.9.6)
+    - MapsIndoorsMapbox11 (= 4.9.6)
+  - MapsIndoorsCodable (4.9.6):
+    - MapsIndoors (= 4.9.6)
+    - MapsIndoorsCore (= 4.9.6)
+  - MapsIndoorsCore (4.9.6):
+    - MapsIndoors (= 4.9.6)
+  - MapsIndoorsMapbox11 (4.9.6):
+    - MapboxMaps (= 11.9.1)
+    - MapsIndoorsCore (= 4.9.6)
+  - Turf (4.0.0)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - mapsindoors_mapbox_ios (from `.symlinks/plugins/mapsindoors_mapbox_ios/ios`)
+
+SPEC REPOS:
+  trunk:
+    - MapboxCommon
+    - MapboxCoreMaps
+    - MapboxMaps
+    - MapsIndoors
+    - MapsIndoorsCodable
+    - MapsIndoorsCore
+    - MapsIndoorsMapbox11
+    - Turf
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  mapsindoors_mapbox_ios:
+    :path: ".symlinks/plugins/mapsindoors_mapbox_ios/ios"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  MapboxCommon: 678bfc4b477a804244fd7323c79cc7f2402f844e
+  MapboxCoreMaps: c22e65380c0e11551081196f083b20cab662a5fe
+  MapboxMaps: dbe3b02f9adcee903d5217c9b251536828bc6304
+  MapsIndoors: db43055066856062c4f78ef54a4331400b093d87
+  mapsindoors_mapbox_ios: d5cc7f377ce8e35ee3b0d7e5848d2033d72237e3
+  MapsIndoorsCodable: 1129d7970b7d9ddcded07afa46f29dbe5dda0019
+  MapsIndoorsCore: 886ab3004b83cc726da9ae73be679f9f749951af
+  MapsIndoorsMapbox11: cad98c545289105d2ee0bce013b9929b452c5f98
+  Turf: c9eb11a65d96af58cac523460fd40fec5061b081
+
+PODFILE CHECKSUM: 446796e3f048ec77ed8d5fa71dc77b18bbc4a096
+
+COCOAPODS: 1.16.2
